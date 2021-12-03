@@ -1,23 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 
 function TabGroup(props) {
   const buttons = [];
+  const [currentTeamName, setCurrentTeamName] = useState(
+    props.teamComps[0].teamName
+  );
 
-  for (let i = 0; i < props.children.length; i++) {
-    if (i === props.children.length - 1) {
-      buttons.push(
-        <button className="border-2 border-blue-900">button</button>
-      );
-    } else {
-      buttons.push(
-        <button className="border-2 border-blue-900 mr-2">button</button>
-      );
-    }
+  const handleClick = (teamName) => {
+    setCurrentTeamName(teamName);
+  };
+
+  for (let i = 0; i < props.teamComps.length; i++) {
+    const lastTeamComp = i === props.teamComps.length - 1 ? "" : "";
+
+    buttons.push(
+      <button className='border-2 border-blue-900 mr-2'>button</button>
+    );
   }
 
   return (
     <>
-      <div className="max-w-screen-md mx-auto">{buttons}</div>
+      <div className='max-w-screen-md mx-auto'>{buttons}</div>
     </>
   );
 }
