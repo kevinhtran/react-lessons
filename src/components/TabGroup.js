@@ -10,13 +10,13 @@ function TabGroup(props) {
     setCurrentTeamName(teamName);
   };
 
-  for (let i = 0; i < props.teamComps.length; i++) {
-    const lastTeamComp = i === props.teamComps.length - 1 ? "" : "";
+  // for (let i = 0; i < props.teamComps.length; i++) {
+  //   const lastTeamComp = i === props.teamComps.length - 1 ? "" : "";
 
-    buttons.push(
-      <button className='border-2 border-blue-900 mr-2'>button</button>
-    );
-  }
+  //   buttons.push(
+  //     <button className='border-2 border-blue-900 mr-2'>button</button>
+  //   );
+  // }
 
   return (
     <>
